@@ -1,0 +1,10 @@
+#!/usr/bin/env node
+
+'use strict';
+
+Error.stackTraceLimit = Infinity;
+
+var root = require('path').resolve(__dirname, '..')
+  , env  = require('../env');
+
+require('eregistrations/scripts/generate-client-env')(env, root).done();

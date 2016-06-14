@@ -1,0 +1,29 @@
+{
+  "name": "eregistrations-CHANGEME",
+  "version": "0.1.0",
+  "private": true,
+  "description": "eRegistrations for CHANGEME",
+  "author": "UNCTAD team",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/egovernment/eregistrations-CHANGEME.git"
+  },
+  "scripts": {
+    "start": "node bin/setup && node bin/start",
+    "quick-start": "node bin/start",
+    "setup": "node bin/setup",
+    "create-users-admin": "node bin/create-users-admin",
+    "i18n-scan": "node node_modules/mano/bin/i18n-scan",
+    "ci": "node bin/ci",
+    "db-recompute": "node bin/db-recompute",
+    "lint": "node node_modules/xlint/bin/xlint --linter=node_modules/xlint-jslint-medikoo/index.js",
+    "lint-ci": "node node_modules/xlint/bin/xlint --linter=node_modules/xlint-jslint-medikoo/index.js --no-cache --no-stream",
+    "lint-console": "node node_modules/xlint/bin/xlint --linter=node_modules/xlint-jslint-medikoo/index.js --watch",
+    "lint-log-console": "node node_modules/xlint/bin/xlint --linter=node_modules/xlint-jslint-medikoo/index.js --watch --logView",
+    "css-lint": "node node_modules/xlint/bin/xlint --linter=node_modules/xlint-csslint-next/index.js --fileExt=css",
+    "css-lint-console": "node node_modules/xlint/bin/xlint --linter=node_modules/xlint-csslint-next/index.js --fileExt=css --watch",
+    "css-lint-ci": "node node_modules/xlint/bin/xlint --linter=node_modules/xlint-csslint-next/index.js --fileExt=css --no-cache --no-stream",
+    "ensure-eol": "node node_modules/mano/bin/ensure-eol",
+    "ensure-valid-filenames": "node node_modules/mano/bin/ensure-valid-filenames"
+  }
+}

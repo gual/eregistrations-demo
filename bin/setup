@@ -1,0 +1,10 @@
+#!/usr/bin/env node
+
+'use strict';
+
+Error.stackTraceLimit = Infinity;
+
+require('fs2/descriptors-handler')();
+require('eregistrations/server/utils/debug-conf');
+
+require('../scripts/setup')().done();

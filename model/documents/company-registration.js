@@ -1,0 +1,9 @@
+'use strict';
+
+var _  = require('../../i18n')
+  , db = require('../../db');
+
+module.exports = require('eregistrations/model/document')(db).extend('CompanyRegistration', {}, {
+	label: { value: _("Company registration") },
+	abbr: { value: "CREG" }
+});

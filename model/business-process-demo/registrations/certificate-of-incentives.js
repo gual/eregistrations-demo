@@ -7,5 +7,11 @@ BusinessProcessDemo.prototype.registrations.map.defineProperties({
 });
 
 BusinessProcessDemo.prototype.registrations.map.certificateOfIncentives.setProperties({
-	Document: require('../../documents/certificate-of-incentives')
+	Document: require('../../documents/certificate-of-incentives'),
+	isApplicable: function (_observe) {
+		var businessProcess = this.master
+		  , assets  = businessProcess._get ? _observe(businessProcess._assets) : businessProcess.assets;
+
+		return assets >= 5000;
+	}
 });

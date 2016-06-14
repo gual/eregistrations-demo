@@ -6,6 +6,7 @@ var db                  = require('../../db')
   , _                   = require('../../i18n')
   , UsDollar            = require('dbjs-ext/number/currency/us-dollar')(db)
   , UInteger            = require('dbjs-ext/number/integer/u-integer')(db)
+  , Address             = require('../lib/address')
   , BusinessProcessDemo = module.exports = require('./base');
 
 BusinessProcessDemo.prototype.getOwnDescriptor('businessName').required = true;
@@ -22,5 +23,13 @@ BusinessProcessDemo.prototype.defineProperties({
 		type: UInteger,
 		label: _("Number of employees"),
 		max: 100
+	},
+	address: {
+		type: Address,
+		nested: true
+	},
+	attorney: {
+		type: db.Person,
+		nested: true
 	}
 });

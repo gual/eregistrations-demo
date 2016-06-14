@@ -3,7 +3,8 @@
 'use strict';
 
 var isReadOnlyRender = require('mano/client/utils/is-read-only-render')
-  , db               = require('./model.generated');
+  , db               = require('./model.generated')
+  , domEnum          = require('dbjs-dom/enum');
 
 require('dbjs-dom/text')(db);
 require('dbjs-dom/input')(db);
@@ -23,3 +24,5 @@ if (!isReadOnlyRender) require('dbjs-file/client')(db, FormData, XMLHttpRequest,
 
 require('eregistrations/view/dbjs/form-section-to-dom');
 require('eregistrations/view/dbjs/requirement-upload-to-dom-form');
+
+domEnum(db.Country);

@@ -18,6 +18,10 @@ module.exports = {
 		require("../../../apps/meta-admin/controller"),
 		require("../../../apps/meta-admin/controller/server")
 	),
+	"apps/official-revision": joinControllers(
+		require("../../../apps/official-revision/controller"),
+		require("../../../apps/official-revision/controller/server")
+	),
 	"apps/user": joinControllers(
 		require("../../../apps/user/controller"),
 		require("../../../apps/user/controller/server")

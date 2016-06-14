@@ -46,6 +46,11 @@ module.exports = {
 		null,
 		joinOptions
 	),
+	"apps/official-front-desk": joinControllers(
+		require("../../../apps/official-front-desk/controller"),
+		null,
+		joinOptions
+	),
 	"apps/public": publicRoutes,
 	"apps/user": joinControllers(
 		require("../../../apps/user/controller"),

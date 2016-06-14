@@ -17,3 +17,5 @@ assign(exports, require('eregistrations/routes/official')('processing'));
 exports['/'] = require('../../view/official-processing/business-processes-table');
 exports['print-business-processes-list'] =
 	require('../../view/official-processing/print-business-processes-table');
+
+require('../../view/official-processing/business-process-official-form');

@@ -11,7 +11,17 @@ BusinessProcessDemo.prototype.processingSteps.map.defineProperties({
 
 BusinessProcessDemo.prototype.processingSteps.map.processing.setProperties({
 	label: _("Processing"),
-	previousSteps: function () { return [this.owner.revision]; }
+	previousSteps: function () { return [this.owner.revision]; },
+	approvalProgress: function (_observe) {
+		var weight = 0, statusSum = 0;
+		_observe(this.master.certificates.applicable).forEach(function (cert) {
+			var certFormWeight = _observe(cert.dataForm._weight);
+			weight += certFormWeight;
+			statusSum += _observe(cert.dataForm._status) * certFormWeight;
+		});
+		if (!weight) return 1;
+		return statusSum / weight;
+	}
 });
 
 module.exports = BusinessProcessDemo;

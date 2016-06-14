@@ -12,7 +12,7 @@ BusinessProcessDemo.prototype.getOwnDescriptor('determinants').type = FormSectio
 
 BusinessProcessDemo.prototype.determinants.setProperties({
 	disablePartialSubmit: true,
-	propertyNames: []
+	propertyNames: ['assets', 'workers']
 });
 
 module.exports = BusinessProcessDemo;

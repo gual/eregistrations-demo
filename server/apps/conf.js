@@ -4,6 +4,7 @@
 'use strict';
 
 module.exports = {
+	"apps/business-process-demo": require("../../apps/business-process-demo/mano"),
 	"apps/business-process-submitted": require("../../apps/business-process-submitted/mano"),
 	"apps/meta-admin": require("../../apps/meta-admin/mano"),
 	"apps/public": require("../../apps/public/mano"),

@@ -1,17 +1,18 @@
 'use strict';
 
-var deferred                  = require('deferred')
-  , resolve                   = require('path').resolve
-  , generateAppsClientModel   = require('mano/scripts/generate-apps-client-model')
-  , generateAppsHtmlIndex     = require('mano/scripts/generate-apps-html-index')
-  , generateAppsClientProgram = require('mano/scripts/generate-apps-client-program')
-  , generateAppsClientCss     = require('mano/scripts/generate-apps-client-css')
-  , generateClientEnv         = require('eregistrations/scripts/generate-client-env')
-  , cloudfrontInvalidate      = require('eregistrations/server/scripts/cloudfront-invalidate')
-  , dbRecompute               = require('../server/scripts/db-recompute-in-sandbox')
-  , i18nScan                  = require('./i18n-scan')
-  , env                       = require('../env')
-  , appsList                  = require('../server/apps/list')
+var deferred                   = require('deferred')
+  , resolve                    = require('path').resolve
+  , generateAppsClientModel    = require('mano/scripts/generate-apps-client-model')
+  , generateAppsHtmlIndex      = require('mano/scripts/generate-apps-html-index')
+  , generateAppsClientProgram  = require('mano/scripts/generate-apps-client-program')
+  , generateAppsClientCss      = require('mano/scripts/generate-apps-client-css')
+  , generateClientEnv          = require('eregistrations/scripts/generate-client-env')
+  , cloudfrontInvalidate       = require('eregistrations/server/scripts/cloudfront-invalidate')
+  , dbRecompute                = require('../server/scripts/db-recompute-in-sandbox')
+  , generateDemoLegacyDbjsMock = require('./generate-business-process-demo-legacy-dbjs-mock')
+  , i18nScan                   = require('./i18n-scan')
+  , env                        = require('../env')
+  , appsList                   = require('../server/apps/list')
 
   , root = resolve(__dirname, '..');
 
@@ -27,13 +28,15 @@ module.exports = function () {
 		generateAppsClientModel.bind(null, root, appsList),
 		// 4. Generate client-side index.html entry files
 		generateAppsHtmlIndex.bind(null, root, appsList),
-		// 5. Ensure to have actual state of indexes
+		// 5. Generate client-side old browsers dedicated demo database mock
+		generateDemoLegacyDbjsMock,
+		// 6. Ensure to have actual state of indexes
 		dbRecompute,
-		// 6. Generate CSS bundles (clide-side stylesheets)
+		// 7. Generate CSS bundles (clide-side stylesheets)
 		!env.dev && generateAppsClientCss.bind(null, root, appsList),
-		// 7. Generate JS bundles (client-side programs)
+		// 8. Generate JS bundles (client-side programs)
 		!env.dev && generateAppsClientProgram.bind(null, root, appsList),
-		// 8. Invalidate Cloudfront (if configured)
+		// 9. Invalidate Cloudfront (if configured)
 		env.cloudfront && cloudfrontInvalidate.bind(null, root, appsList, env.cloudfront)
 	], function (ignore, next) { return next && next(); }, null);
 };

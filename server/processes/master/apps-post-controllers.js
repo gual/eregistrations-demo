@@ -41,6 +41,11 @@ module.exports = {
 		null,
 		joinOptions
 	),
+	"apps/official-processing": joinControllers(
+		require("../../../apps/official-processing/controller"),
+		null,
+		joinOptions
+	),
 	"apps/public": publicRoutes,
 	"apps/user": joinControllers(
 		require("../../../apps/user/controller"),

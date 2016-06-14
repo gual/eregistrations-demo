@@ -22,6 +22,10 @@ module.exports = {
 		require("../../../apps/official-revision/controller"),
 		require("../../../apps/official-revision/controller/server")
 	),
+	"apps/official-processing": joinControllers(
+		require("../../../apps/official-processing/controller"),
+		require("../../../apps/official-processing/controller/server")
+	),
 	"apps/user": joinControllers(
 		require("../../../apps/user/controller"),
 		require("../../../apps/user/controller/server")

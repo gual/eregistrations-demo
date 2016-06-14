@@ -11,6 +11,8 @@ module.exports = {
 		new ControllerRouter(require('../../apps/business-process-submitted/server/routes')),
 	'meta-admin': new ControllerRouter(require('../../apps/meta-admin/server/routes')),
 	'official-revision': new ControllerRouter(require('../../apps/official-revision/server/routes')),
+	'official-processing':
+		new ControllerRouter(require('../../apps/official-processing/server/routes')),
 	user: new ControllerRouter(require('../../apps/user/server/routes')),
 	'users-admin': new ControllerRouter(require('../../apps/users-admin/server/routes'))
 };

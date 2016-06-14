@@ -17,3 +17,5 @@ assign(exports, require('eregistrations/routes/official')('frontDesk'));
 exports['/'] = require('../../view/official-front-desk/business-processes-table');
 exports['print-business-processes-list'] =
 	require('../../view/official-front-desk/print-business-processes-table');
+
+require('../../view/official-front-desk/business-process-official-form');

@@ -7,6 +7,5 @@ BusinessProcessDemo.prototype.registrations.map.defineProperties({
 });
 
 BusinessProcessDemo.prototype.registrations.map.certificateOfIncentives.setProperties({
-	Document: require('../../documents/certificate-of-incentives'),
-	certificates: []
+	Document: require('../../documents/certificate-of-incentives')
 });

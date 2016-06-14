@@ -7,6 +7,5 @@ BusinessProcessDemo.prototype.registrations.map.defineProperties({
 });
 
 BusinessProcessDemo.prototype.registrations.map.companyRegistration.setProperties({
-	Document: require('../../documents/company-registration'),
-	certificates: []
+	Document: require('../../documents/company-registration')
 });

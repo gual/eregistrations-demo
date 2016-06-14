@@ -2,4 +2,4 @@
 
 var db = require('../../../../db');
 
-module.exports = require('eregistrations/notifications/revision-sent-back')(db.BusinessProcessCHANGEME);
+module.exports = require('eregistrations/notifications/revision-sent-back')(db.BusinessProcessDemo);

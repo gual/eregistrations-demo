@@ -106,7 +106,7 @@ loadView = function () {
 	var siteTree = new DomjsSiteTree(require('mano/lib/client/domjs'));
 	var siteTreeRouter = new SiteTreeRouter(require('../routes'), siteTree, {
 		eventProto: { appName: 'official-revision', user: user,
-			processingStep: db.BusinessProcessCHANGEME.prototype.processingSteps.map.revision },
+			processingStep: db.BusinessProcessDemo.prototype.processingSteps.map.revision },
 		notFound: require('eregistrations/view/404')
 	});
 

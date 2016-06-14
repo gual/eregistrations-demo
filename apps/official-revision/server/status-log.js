@@ -2,4 +2,4 @@
 
 var db = require('../../../db');
 
-module.exports = require('eregistrations/status-logs/official-revision')(db.BusinessProcessCHANGEME);
+module.exports = require('eregistrations/status-logs/official-revision')(db.BusinessProcessDemo);

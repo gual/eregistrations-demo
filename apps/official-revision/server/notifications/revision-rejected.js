@@ -2,4 +2,4 @@
 
 var db = require('../../../../db');
 
-module.exports = require('eregistrations/notifications/revision-rejected')(db.BusinessProcessCHANGEME);
+module.exports = require('eregistrations/notifications/revision-rejected')(db.BusinessProcessDemo);

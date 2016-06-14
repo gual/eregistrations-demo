@@ -2,8 +2,15 @@
 
 'use strict';
 
+var db = require('../db')
+  , _  = require('../i18n').bind('User');
+
 // Assure base customisations are loaded
 require('./user-base');
+
+var getSelectedBusinessProcesses = function (user, bpType) {
+	return bpType.instances.filterByKey('user', user).filterByKey('isSubmitted', false);
+};
 
 module.exports = exports = require('eregistrations/view/user');
 
@@ -26,5 +33,12 @@ exports._servicesBoxList = function () {
 	 * }
 	 *
 	 */
-	return [];
+	return [{
+		actionUrl: '/register-as-demo/',
+		buttonContent:  div({ class: 'user-account-service-button' },
+			i({ class: 'fa fa-user' }), _("Register Demo")),
+		content: span(_("Short description of demo registration process")),
+		disabledCondition: gtOrEq(getSelectedBusinessProcesses(this.user,
+			db.BusinessProcessDemo)._size, 5)
+	}];
 };

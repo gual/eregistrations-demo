@@ -1,12 +1,12 @@
 {
-  "name": "eregistrations-CHANGEME",
+  "name": "eregistrations-demo",
   "version": "0.1.0",
   "private": true,
-  "description": "eRegistrations for CHANGEME",
+  "description": "eRegistrations Demo",
   "author": "UNCTAD team",
   "repository": {
     "type": "git",
-    "url": "git://github.com/egovernment/eregistrations-CHANGEME.git"
+    "url": "git://github.com/egovernment/eregistrations-demo.git"
   },
   "scripts": {
     "start": "node bin/setup && node bin/start",

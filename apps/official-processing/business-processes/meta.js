@@ -2,10 +2,9 @@
 
 'use strict';
 
-var forEach = require('es5-ext/object/for-each')
+var _       = require('../../../i18n').bind('Official')
   , d       = require('d')
-  , _       = require('../../../i18n')
-
+  , forEach = require('es5-ext/object/for-each')
   , meta;
 
 module.exports = meta = Object.defineProperties({
@@ -30,7 +29,7 @@ module.exports = meta = Object.defineProperties({
 		label: _("Sent for corrections"),
 		order: 4
 	}
-}, { _services: d(['TODO: Provide service names']) });
+}, { _services: d(['demo']) });
 
 forEach(meta, function (conf, name) {
 	if (name === 'all') {

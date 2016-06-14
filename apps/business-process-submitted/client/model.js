@@ -10,6 +10,8 @@ var db       = require('../../../db')
 
 user.$password.type = Password;
 
+require('../../../model/business-process-demo');
+
 require('../../../model/views');
 
 module.exports = db;

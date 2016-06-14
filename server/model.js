@@ -10,8 +10,7 @@ require('../model/user/roles');
 require('../model/user/recently-visited/business-processes');
 require('../model/institutions');
 
-// TODO: Remove below line as soon as first business process is configured
-require('../model/business-process');
+require('../model/business-process-demo');
 
 // Ensure domId property on sections
 require('eregistrations/view/dbjs/form-section-base-dom-id');

@@ -10,8 +10,7 @@ var db       = require('../../../db')
 
 user.$password.type = Password;
 
-// TODO: Remove below line as soon as first business process service is added
-require('../../../model/business-process');
+require('../../../model/business-process-demo');
 
 require('../../../model/views');
 

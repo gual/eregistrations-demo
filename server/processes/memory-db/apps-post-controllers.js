@@ -6,6 +6,10 @@
 var joinControllers = require('mano/utils/join-controllers');
 
 module.exports = {
+	"apps/business-process-demo": joinControllers(
+		require("../../../apps/business-process-demo/controller"),
+		require("../../../apps/business-process-demo/controller/server")
+	),
 	"apps/business-process-submitted": joinControllers(
 		require("../../../apps/business-process-submitted/controller"),
 		require("../../../apps/business-process-submitted/controller/server")

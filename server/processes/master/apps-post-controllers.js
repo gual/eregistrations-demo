@@ -21,6 +21,11 @@ globalRoutes.login = publicRoutes.login;
 var joinOptions = { extendedOnly: true, globalRoutes: nonPublicGlobalRoutes };
 
 module.exports = {
+	"apps/business-process-demo": joinControllers(
+		require("../../../apps/business-process-demo/controller"),
+		null,
+		joinOptions
+	),
 	"apps/business-process-submitted": joinControllers(
 		require("../../../apps/business-process-submitted/controller"),
 		null,

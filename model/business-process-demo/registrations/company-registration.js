@@ -13,5 +13,9 @@ BusinessProcessDemo.prototype.registrations.map.companyRegistration.setPropertie
 			? _observe(this.master._workers) : this.master.workers;
 		if (!workers) return;
 		return [this.master.costs.map.companyRegistration];
+	},
+	requirements: function () {
+		var requirementsMap = this.master.requirements.map;
+		return [requirementsMap.inventory, requirementsMap.passport];
 	}
 });

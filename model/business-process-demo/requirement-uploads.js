@@ -5,5 +5,8 @@ var defineRequirementUploads =
 	require('eregistrations/model/business-process-new/utils/define-requirement-uploads');
 
 module.exports = defineRequirementUploads(BusinessProcessDemo, [
-	/* TODO: Provide document classes */
+	require('../documents/business-plan'),
+	require('../documents/company-registration'),
+	require('../documents/inventory'),
+	require('../documents/passport')
 ]);

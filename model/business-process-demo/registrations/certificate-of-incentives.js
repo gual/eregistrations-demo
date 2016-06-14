@@ -13,5 +13,9 @@ BusinessProcessDemo.prototype.registrations.map.certificateOfIncentives.setPrope
 		  , assets  = businessProcess._get ? _observe(businessProcess._assets) : businessProcess.assets;
 
 		return assets >= 5000;
+	},
+	requirements: function () {
+		var requirementsMap = this.master.requirements.map;
+		return [requirementsMap.companyRegistration, requirementsMap.businessPlan];
 	}
 });

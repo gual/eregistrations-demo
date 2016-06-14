@@ -7,6 +7,7 @@ module.exports = [
 	"apps/business-process-demo",
 	"apps/business-process-submitted",
 	"apps/meta-admin",
+	"apps/official-processing",
 	"apps/official-revision",
 	"apps/public",
 	"apps/user",

@@ -14,7 +14,7 @@ BusinessProcessDemo.prototype.dataForms.map.representativeDetails.setProperties(
 	label: _("Representative details"),
 	actionUrl: 'representative-details',
 	propertyNames: ['representative/firstName', 'representative/lastName',
-		'representative/email']
+		'representative/email', 'representative/idNumber']
 });
 
 module.exports = BusinessProcessDemo;

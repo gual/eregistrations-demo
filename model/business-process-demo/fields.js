@@ -31,5 +31,13 @@ BusinessProcessDemo.prototype.defineProperties({
 	attorney: {
 		type: db.Person,
 		nested: true
+	},
+	expectedIncome: {
+		type: UsDollar,
+		label: _("Expected income"),
+		inputHint: _("If your organization is non-profit, put '0'"),
+		min: 0,
+		step: 1,
+		required: true
 	}
 });

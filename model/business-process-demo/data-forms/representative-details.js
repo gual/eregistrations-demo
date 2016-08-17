@@ -12,6 +12,7 @@ BusinessProcessDemo.prototype.dataForms.map.define('representativeDetails', {
 
 BusinessProcessDemo.prototype.dataForms.map.representativeDetails.setProperties({
 	label: _("Representative details"),
+	legend: _("The data of the contact person"),
 	actionUrl: 'representative-details',
 	propertyNames: ['representative/firstName', 'representative/lastName',
 		'representative/email', 'representative/idNumber']

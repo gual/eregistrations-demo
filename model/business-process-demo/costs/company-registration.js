@@ -16,6 +16,6 @@ BusinessProcessDemo.prototype.costs.map.companyRegistration.setProperties({
 		var businessProcess = this.master
 		  , assets  = businessProcess._get ? _observe(businessProcess._assets) : businessProcess.assets;
 
-		return Math.max(Math.ceil((assets || 0) / 1000) * 10, 10);
+		return Math.max(Math.ceil((assets || 0) * 0.02), 25);
 	}
 });

@@ -4,10 +4,12 @@ var from        = require('es5-ext/array/from')
   , getTable    = require('eregistrations/view/components/business-processes-table')
   , tableCols   = require('eregistrations/view/components/business-process-table-columns')
   , statusMap   = require('../../apps/official-front-desk/business-processes/map')
-  , getOrderIdx = require('../../apps/official-front-desk/business-processes/get-default-order-index')
   , env         = require('../../apps-common/client/env')
 
   , columns       = from(tableCols.columns);
+
+var getOrderIdx =
+	require('../../apps/official-front-desk/business-processes/get-default-order-index');
 
 module.exports = exports = require('eregistrations/view/business-processes-table');
 

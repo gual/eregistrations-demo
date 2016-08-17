@@ -32,6 +32,7 @@ predef+ console, setTimeout, setInterval
 ./bin
 ./scripts
 ./server
+./env.js
 predef+ __dirname, process
 
 ./view

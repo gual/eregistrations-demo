@@ -2,4 +2,4 @@
 
 'use strict';
 
-module.exports = require('eregistrations/controller/user/client');
+module.exports = require('eregistrations/controller/official-front-desk/client');

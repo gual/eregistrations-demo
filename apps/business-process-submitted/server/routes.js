@@ -2,4 +2,6 @@
 
 'use strict';
 
-module.exports = require('eregistrations/server/routes/authenticated')();
+var assign = require('es5-ext/object/assign');
+
+assign(exports, require('eregistrations/server/routes/business-process-submitted'));

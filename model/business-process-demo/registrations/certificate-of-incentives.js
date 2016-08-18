@@ -16,6 +16,7 @@ BusinessProcessDemo.prototype.registrations.map.certificateOfIncentives.setPrope
 	},
 	requirements: function () {
 		var requirementsMap = this.master.requirements.map;
-		return [requirementsMap.companyRegistration, requirementsMap.businessPlan];
+		return [requirementsMap.companyRegistration, requirementsMap.businessPlan,
+			requirementsMap.idDocument];
 	}
 });

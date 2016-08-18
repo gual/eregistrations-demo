@@ -40,6 +40,12 @@ BusinessProcessDemo.prototype.defineProperties({
 		min: 0,
 		step: 1,
 		required: true
+	},
+	isLocalInvestment: {
+		type: db.Boolean,
+		label: _("Is the investment local or foreign?"),
+		inputHint: _("Answer 'Yes' for local"),
+		required: true
 	}
 });
 

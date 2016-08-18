@@ -49,11 +49,18 @@ BusinessProcessDemo.prototype.defineProperties({
 	}
 });
 
-BusinessProcessDemo.prototype.representative.define('idNumber', {
-	type: StringLine,
-	label: _("Identification number"),
-	pattern: /^\d{4}-\d{4}-[A-Z]{2}$/,
-	inputMask: '8888-8888-AA',
-	inputHint: _("The required format is: 0000-0000-AA"),
-	required: true
+BusinessProcessDemo.prototype.representative.defineProperties({
+	idNumber: {
+		type: StringLine,
+		label: _("Identification number"),
+		pattern: /^\d{4}-\d{4}-[A-Z]{2}$/,
+		inputMask: '8888-8888-AA',
+		inputHint: _("The required format is: 0000-0000-AA"),
+		required: true
+	},
+	isCitizen: {
+		type: db.Boolean,
+		label: _("Are you a citizen of our country?"),
+		required: true
+	}
 });

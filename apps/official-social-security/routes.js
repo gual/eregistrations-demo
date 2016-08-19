@@ -17,3 +17,6 @@ assign(exports, require('eregistrations/routes/official')('socialSecurity'));
 exports['/'] = require('../../view/official-social-security/business-processes-table');
 exports['print-business-processes-list'] =
 	require('../../view/official-social-security/print-business-processes-table');
+
+exports['[0-9][a-z0-9]*'].view =
+	require('../../view/official-social-security/business-process-official-form');

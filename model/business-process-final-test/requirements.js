@@ -6,5 +6,7 @@ var defineRequirements =
 	require('eregistrations/model/business-process-new/utils/define-requirements');
 
 module.exports = defineRequirements(BusinessProcessFinalTest, [
-	/* TODO: Provide document classes */
+	require('../documents/passport'),
+	require('../documents/graduation-diploma'),
+	require('../documents/transportation-ticket')
 ]);

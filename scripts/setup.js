@@ -10,6 +10,8 @@ var deferred                   = require('deferred')
   , cloudfrontInvalidate       = require('eregistrations/server/scripts/cloudfront-invalidate')
   , dbRecompute                = require('../server/scripts/db-recompute-in-sandbox')
   , generateDemoLegacyDbjsMock = require('./generate-business-process-demo-legacy-dbjs-mock')
+  , generateFinalTestLegacyDbjsMock =
+		require('./generate-business-process-final-test-legacy-dbjs-mock')
   , i18nScan                   = require('./i18n-scan')
   , env                        = require('../env')
   , appsList                   = require('../server/apps/list')
@@ -28,8 +30,9 @@ module.exports = function () {
 		generateAppsClientModel.bind(null, root, appsList),
 		// 4. Generate client-side index.html entry files
 		generateAppsHtmlIndex.bind(null, root, appsList),
-		// 5. Generate client-side old browsers dedicated demo database mock
+		// 5. Generate client-side old browsers dedicated database mocks
 		generateDemoLegacyDbjsMock,
+		generateFinalTestLegacyDbjsMock,
 		// 6. Ensure to have actual state of indexes
 		dbRecompute,
 		// 7. Generate CSS bundles (clide-side stylesheets)

@@ -11,6 +11,7 @@ require('../model/user/recently-visited/business-processes');
 require('../model/institutions');
 
 require('../model/business-process-demo');
+require('../model/business-process-final-test');
 
 // Ensure domId property on sections
 require('eregistrations/view/dbjs/form-section-base-dom-id');

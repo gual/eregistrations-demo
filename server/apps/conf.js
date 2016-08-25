@@ -8,6 +8,7 @@ module.exports = {
 	"apps/business-process-final-test": require("../../apps/business-process-final-test/mano"),
 	"apps/business-process-submitted": require("../../apps/business-process-submitted/mano"),
 	"apps/meta-admin": require("../../apps/meta-admin/mano"),
+	"apps/official-edc-processing": require("../../apps/official-edc-processing/mano"),
 	"apps/official-front-desk": require("../../apps/official-front-desk/mano"),
 	"apps/official-processing": require("../../apps/official-processing/mano"),
 	"apps/official-revision": require("../../apps/official-revision/mano"),

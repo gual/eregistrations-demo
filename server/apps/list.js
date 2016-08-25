@@ -8,6 +8,7 @@ module.exports = [
 	"apps/business-process-final-test",
 	"apps/business-process-submitted",
 	"apps/meta-admin",
+	"apps/official-edc-processing",
 	"apps/official-front-desk",
 	"apps/official-processing",
 	"apps/official-revision",

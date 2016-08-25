@@ -6,6 +6,7 @@ var db                       = require('../../db')
   , _                        = require('../../i18n')
   , UInteger                 = require('dbjs-ext/number/integer/u-integer')(db)
   , StringLine               = require('dbjs-ext/string/string-line')(db)
+  , DateType                 = require('dbjs-ext/date-time/date')(db)
   , Map                      = require('es6-map')
   , BusinessProcessFinalTest = module.exports = require('./base');
 
@@ -51,5 +52,40 @@ BusinessProcessFinalTest.prototype.defineProperties({
 		type: ProgrammingLanguage,
 		label: _("What is your favourite programming language?"),
 		required: true
+	},
+	hobby: {
+		label: _("Hobby"),
+		type: StringLine
+	},
+	businessName: {
+		label: _("Nickname"),
+		required: true
+	},
+	birthDate: {
+		type: DateType,
+		required: true,
+		label: _("Date of birth")
+	},
+	quiz: {
+		type: db.Object,
+		nested: true
+	}
+});
+
+BusinessProcessFinalTest.prototype.quiz.defineProperties({
+	howManyNonValues: {
+		required: true,
+		type: UInteger,
+		label: _("How many non values are there?")
+	},
+	nullToUndefinedComparison: {
+		required: true,
+		type: db.Boolean,
+		label: _("Is the result of: null == undefined; true?")
+	},
+	concatOperator: {
+		required: true,
+		type: StringLine,
+		label: _("What is the concatenation operator?")
 	}
 });

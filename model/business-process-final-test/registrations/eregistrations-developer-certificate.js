@@ -10,6 +10,5 @@ finalTestRegistrationsMap.defineProperties({
 });
 
 finalTestRegistrationsMap.eregistrationsDeveloperCertificate.setProperties({
-	Document: require('../../documents/eregistrations-developer-certificate'),
-	certificates: []
+	Document: require('../../documents/eregistrations-developer-certificate')
 });

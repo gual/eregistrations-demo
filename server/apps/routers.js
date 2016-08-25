@@ -15,6 +15,8 @@ module.exports = {
 	'official-revision': new ControllerRouter(require('../../apps/official-revision/server/routes')),
 	'official-processing':
 		new ControllerRouter(require('../../apps/official-processing/server/routes')),
+	'official-edc-processing':
+		new ControllerRouter(require('../../apps/official-edc-processing/server/routes')),
 	'official-front-desk':
 		new ControllerRouter(require('../../apps/official-front-desk/server/routes')),
 	user: new ControllerRouter(require('../../apps/user/server/routes')),

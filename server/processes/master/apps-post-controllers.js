@@ -51,6 +51,11 @@ module.exports = {
 		null,
 		joinOptions
 	),
+	"apps/official-edc-processing": joinControllers(
+		require("../../../apps/official-edc-processing/controller"),
+		null,
+		joinOptions
+	),
 	"apps/official-front-desk": joinControllers(
 		require("../../../apps/official-front-desk/controller"),
 		null,

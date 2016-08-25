@@ -13,3 +13,9 @@ exports['register-as-demo'] = {
 	redirectUrl: '/',
 	validate: validateCreateBp(db.BusinessProcessDemo)
 };
+
+exports['register-as-final-test'] = {
+	submit: createBp(db.BusinessProcessFinalTest),
+	redirectUrl: '/',
+	validate: validateCreateBp(db.BusinessProcessFinalTest)
+};

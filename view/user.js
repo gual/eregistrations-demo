@@ -40,5 +40,12 @@ exports._servicesBoxList = function () {
 		content: span(_("Short description of demo registration process")),
 		disabledCondition: gtOrEq(getSelectedBusinessProcesses(this.user,
 			db.BusinessProcessDemo)._size, 5)
+	}, {
+		actionUrl: '/register-as-final-test/',
+		buttonContent:  div({ class: 'user-account-service-button' },
+			i({ class: 'fa fa-user' }), _("Register Final Test")),
+		content: span(_("Short description of final test registration process")),
+		disabledCondition: gtOrEq(getSelectedBusinessProcesses(this.user,
+			db.BusinessProcessFinalTest)._size, 5)
 	}];
 };

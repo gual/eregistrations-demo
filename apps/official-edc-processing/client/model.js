@@ -14,4 +14,6 @@ require('../../../model/user/recently-visited/business-processes');
 
 require('../../../model/views');
 
+require('../../../model/business-process-final-test');
+
 module.exports = db;

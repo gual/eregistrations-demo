@@ -106,7 +106,7 @@ loadView = function () {
 	var siteTree = new DomjsSiteTree(require('mano/lib/client/domjs'));
 	var siteTreeRouter = new SiteTreeRouter(require('../routes'), siteTree, {
 		eventProto: { appName: 'official-edc-processing', user: user,
-			processingStep: db.BusinessProcessCHANGEME.prototype.processingSteps.map.edcProcessing },
+			processingStep: db.BusinessProcessFinalTest.prototype.processingSteps.map.edcProcessing },
 		notFound: require('eregistrations/view/404')
 	});
 

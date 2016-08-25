@@ -17,3 +17,6 @@ assign(exports, require('eregistrations/routes/official')('edcProcessing'));
 exports['/'] = require('../../view/official-edc-processing/business-processes-table');
 exports['print-business-processes-list'] =
 	require('../../view/official-edc-processing/print-business-processes-table');
+
+exports['[0-9][a-z0-9]*'].view =
+	require('../../view/official-edc-processing/business-process-official-form');

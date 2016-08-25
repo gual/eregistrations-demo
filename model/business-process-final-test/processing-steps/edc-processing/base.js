@@ -16,13 +16,24 @@ edcStep.defineProperties({
 	score: {
 		type: UInteger,
 		max: 3,
-		label: _("Certificate score")
+		label: _("Certificate score"),
+		required: true
 	}
 });
 
 edcStep.setProperties({
 	label: _("EDC Processing"),
-	previousSteps: function () { return [this.owner.revision]; }
+	previousSteps: function () { return [this.owner.revision]; },
+	approvalProgress: function (_observe) {
+		var weight = 1, statusSum = 0;
+		_observe(this.master.certificates.applicable).forEach(function (cert) {
+			var certFormWeight = _observe(cert.dataForm._weight);
+			weight += certFormWeight;
+			statusSum += _observe(cert.dataForm._status) * certFormWeight;
+		});
+		statusSum += this.dataForm.status;
+		return statusSum / weight;
+	}
 });
 
 module.exports = BusinessProcessFinalTest;

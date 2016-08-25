@@ -10,5 +10,8 @@ finalTestRegistrationsMap.defineProperties({
 });
 
 finalTestRegistrationsMap.eregistrationsDeveloperCertificate.setProperties({
-	Document: require('../../documents/eregistrations-developer-certificate')
+	Document: require('../../documents/eregistrations-developer-certificate'),
+	costs: function () {
+		return [this.master.costs.map.eregistrationsDeveloperCertificate];
+	}
 });

@@ -5,6 +5,7 @@
 
 module.exports = [
 	"apps/business-process-demo",
+	"apps/business-process-final-test",
 	"apps/business-process-submitted",
 	"apps/meta-admin",
 	"apps/official-front-desk",

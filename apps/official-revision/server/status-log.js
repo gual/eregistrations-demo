@@ -1,5 +1,7 @@
 'use strict';
 
-var db = require('../../../db');
+var db                = require('../../../db')
+  , officialStatusLog = require('eregistrations/status-logs/official-revision');
 
-module.exports = require('eregistrations/status-logs/official-revision')(db.BusinessProcessDemo);
+module.exports = officialStatusLog(db.BusinessProcessDemo)
+	.concat(officialStatusLog(db.BusinessProcessFinalTest));

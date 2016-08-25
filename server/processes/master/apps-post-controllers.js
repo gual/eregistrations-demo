@@ -26,6 +26,11 @@ module.exports = {
 		null,
 		joinOptions
 	),
+	"apps/business-process-final-test": joinControllers(
+		require("../../../apps/business-process-final-test/controller"),
+		null,
+		joinOptions
+	),
 	"apps/business-process-submitted": joinControllers(
 		require("../../../apps/business-process-submitted/controller"),
 		null,

@@ -10,6 +10,10 @@ module.exports = {
 		require("../../../apps/business-process-demo/controller"),
 		require("../../../apps/business-process-demo/controller/server")
 	),
+	"apps/business-process-final-test": joinControllers(
+		require("../../../apps/business-process-final-test/controller"),
+		require("../../../apps/business-process-final-test/controller/server")
+	),
 	"apps/business-process-submitted": joinControllers(
 		require("../../../apps/business-process-submitted/controller"),
 		require("../../../apps/business-process-submitted/controller/server")

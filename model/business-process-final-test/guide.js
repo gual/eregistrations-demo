@@ -12,7 +12,8 @@ BusinessProcessFinalTest.prototype.getOwnDescriptor('determinants').type = FormS
 
 BusinessProcessFinalTest.prototype.determinants.setProperties({
 	disablePartialSubmit: true,
-	propertyNames: []
+	propertyNames: ['yearsOfExperience', 'programmingLanguage',
+		'hasDegreeInComputerScience', 'isTrainingAbroad']
 });
 
 module.exports = BusinessProcessFinalTest;

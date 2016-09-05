@@ -1,12 +1,14 @@
 'use strict';
 
-var BusinessProcessDemo = require('../base');
+var BusinessProcessDemo = require('../base')
+  , _                   = require('../../../i18n').bind("Certificate of Incentives");
 
 BusinessProcessDemo.prototype.registrations.map.defineProperties({
 	certificateOfIncentives: { nested: true }
 });
 
 BusinessProcessDemo.prototype.registrations.map.certificateOfIncentives.setProperties({
+	label: _("Certificate of incentives (business facilitation program)"),
 	Document: require('../../documents/certificate-of-incentives'),
 	isApplicable: function (_observe) {
 		var businessProcess = this.master

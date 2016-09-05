@@ -36,7 +36,7 @@ exports._servicesBoxList = function () {
 	return [{
 		actionUrl: '/register-as-demo/',
 		buttonContent:  div({ class: 'user-account-service-button' },
-			i({ class: 'fa fa-user' }), _("Register Demo")),
+			i({ class: 'fa fa-file' }), _("Register Demo")),
 		content: span(_("Short description of demo registration process")),
 		disabledCondition: gtOrEq(getSelectedBusinessProcesses(this.user,
 			db.BusinessProcessDemo)._size, 5)

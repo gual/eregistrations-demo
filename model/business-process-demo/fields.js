@@ -31,5 +31,10 @@ BusinessProcessDemo.prototype.defineProperties({
 	attorney: {
 		type: db.Person,
 		nested: true
+	},
+	isLocalInvestment: {
+		type: db.Boolean,
+		label: _("Is the investment local?"),
+		required: true
 	}
 });

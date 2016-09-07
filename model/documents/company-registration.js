@@ -4,6 +4,6 @@ var _  = require('../../i18n')
   , db = require('../../db');
 
 module.exports = require('eregistrations/model/document')(db).extend('CompanyRegistration', {}, {
-	label: { value: _("Company registration") },
+	label: { value: _("Company registration in Ministry of Company Registrations") },
 	abbr: { value: "CREG" }
 });

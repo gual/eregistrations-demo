@@ -11,7 +11,7 @@ BusinessProcessDemo.prototype.costs.map.define('companyRegistration', {
 });
 
 BusinessProcessDemo.prototype.costs.map.companyRegistration.setProperties({
-	label: _("Company registration"),
+	label: _("Company registration in the Neverland"),
 	amount: function (_observe) {
 		var businessProcess = this.master
 		  , assets  = businessProcess._get ? _observe(businessProcess._assets) : businessProcess.assets;

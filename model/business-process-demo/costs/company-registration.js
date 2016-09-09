@@ -17,5 +17,6 @@ BusinessProcessDemo.prototype.costs.map.companyRegistration.setProperties({
 		  , assets  = businessProcess._get ? _observe(businessProcess._assets) : businessProcess.assets;
 
 		return Math.max(Math.ceil((assets || 0) / 1000) * 10, 10);
-	}
+	},
+	optionalInfo: _("The registration fee will be charged in your next invoice of municipal taxes.")
 });

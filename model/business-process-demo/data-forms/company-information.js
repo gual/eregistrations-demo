@@ -12,6 +12,7 @@ BusinessProcessDemo.prototype.dataForms.map.define('companyInformation', {
 
 BusinessProcessDemo.prototype.dataForms.map.companyInformation.setProperties({
 	label: _("Company Information"),
+	legend: _("Provide address of the company headquarters"),
 	actionUrl: 'company-information',
 	propertyNames: ['businessName', 'address/country', 'address/city', 'address/street']
 });

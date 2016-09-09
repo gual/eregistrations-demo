@@ -13,7 +13,7 @@ BusinessProcessDemo.prototype.dataForms.map.define('attorney', {
 });
 
 BusinessProcessDemo.prototype.dataForms.map.attorney.setProperties({
-	label: _("Attorney"),
+	label: _("Company attorney"),
 	actionUrl: 'attorney',
 	isApplicable: function (_observe) {
 		return _observe(this.master.registrations.requested)

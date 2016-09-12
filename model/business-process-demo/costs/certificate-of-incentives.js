@@ -11,5 +11,5 @@ BusinessProcessDemo.prototype.costs.map.define('certificateOfIncentives', {
 
 BusinessProcessDemo.prototype.costs.map.certificateOfIncentives.setProperties({
 	label: _("Certificate of incentives"),
-	amount: 100
+	amount: 500
 });

@@ -22,6 +22,7 @@ BusinessProcessDemo.prototype.defineProperties({
 	workers: {
 		type: UInteger,
 		label: _("Number of employees"),
+		required: true,
 		max: 100
 	},
 	address: {

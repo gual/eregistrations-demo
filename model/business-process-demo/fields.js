@@ -14,7 +14,7 @@ BusinessProcessDemo.prototype.getOwnDescriptor('businessName').required = true;
 BusinessProcessDemo.prototype.defineProperties({
 	assets: {
 		type: UsDollar,
-		label: _("Assets"),
+		label: _("Local assets"),
 		min: 1000,
 		step: 1,
 		required: true

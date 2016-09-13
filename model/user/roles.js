@@ -19,4 +19,4 @@ db.Role.meta.get('user').label = _("User");
 db.Role.meta.get('usersAdmin').label = _("Users Admin");
 db.Role.meta.get('officialRevision').label = _("Revision");
 db.Role.meta.get('officialProcessing').label = _("Processing");
-db.Role.meta.get('officialFrontDesk').label = _("Front Desk");
+db.Role.meta.get('officialFrontDesk').label = _("Withdrawal");

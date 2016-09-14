@@ -6,7 +6,7 @@ var db = require('../db')
   , _  = require('../i18n').bind('User');
 
 // Assure base customisations are loaded
-require('./user-base');
+require('./base');
 
 var getSelectedBusinessProcesses = function (user, bpType) {
 	return bpType.instances.filterByKey('user', user).filterByKey('isSubmitted', false);

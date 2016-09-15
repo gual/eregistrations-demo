@@ -22,7 +22,7 @@ socialSecurityStep.defineProperties({
 	},
 	sealDate: {
 		type: DateType,
-		label: _("What is the date of sealing the last certificate?"),
+		label: _("What is the date of sealing the first certificate?"),
 		required: true
 	}
 });

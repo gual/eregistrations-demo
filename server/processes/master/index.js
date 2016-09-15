@@ -5,7 +5,7 @@ var path      = require('path')
   , debug     = require('debug-ext')('start-service')
   , mano      = require('mano')
   , DbjsEvent = require('dbjs/_setup/event')
-  , env       = require('../../../env')
+  , env       = require('../../env')
 
   , resolve = path.resolve
   , root = resolve(__dirname, '../../..')

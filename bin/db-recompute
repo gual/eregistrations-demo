@@ -10,7 +10,7 @@ require('eregistrations/server/utils/debug-conf');
 var resolve      = require('path').resolve
   , initDriver   = require('eregistrations/server/utils/init-driver')
   , recompute    = require('eregistrations/server/scripts/db-recompute')
-  , env          = require('../env')
+  , env          = require('../server/env')
   , storageNames = require('../server/services/db/storage-names')
 
   , root = resolve(__dirname, '..'), slavePath = resolve(__dirname, 'db-recompute-slave');

@@ -5,7 +5,6 @@ var db                  = require('../../../db')
   , ProcessingStep      = require('eregistrations/model/processing-step')(db)
   , BusinessProcessDemo = require('./base')
   , FormSection         = require('eregistrations/model/form-section')(db)
-  , DateType            = require('dbjs-ext/date-time/date')(db)
   , socialSecurityStep;
 
 BusinessProcessDemo.prototype.processingSteps.map.defineProperties({
@@ -18,11 +17,6 @@ socialSecurityStep.defineProperties({
 	isSealConfirmed: {
 		type: db.Boolean,
 		label: _("Are the seals of the certificates confirmed?"),
-		required: true
-	},
-	sealDate: {
-		type: DateType,
-		label: _("What is the date of sealing the last certificate?"),
 		required: true
 	}
 });
@@ -40,7 +34,7 @@ socialSecurityStep.dataForm.setProperties({
 	},
 	label: _("Seals confirmation"),
 	propertyMasterType: socialSecurityStep.constructor,
-	propertyNames: ['isSealConfirmed', 'sealDate']
+	propertyNames: ['isSealConfirmed']
 });
 
 module.exports = BusinessProcessDemo;

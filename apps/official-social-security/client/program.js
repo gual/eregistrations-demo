@@ -106,7 +106,7 @@ loadView = function () {
 	var siteTree = new DomjsSiteTree(require('mano/lib/client/domjs'));
 	var siteTreeRouter = new SiteTreeRouter(require('../routes'), siteTree, {
 		eventProto: { appName: 'official-social-security', user: user,
-			processingStep: db.BusinessProcessCHANGEME.prototype.processingSteps.map.socialSecurity },
+			processingStep: db.BusinessProcessDemo.prototype.processingSteps.map.socialSecurity },
 		notFound: require('eregistrations/view/404')
 	});
 

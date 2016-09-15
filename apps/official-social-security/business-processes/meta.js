@@ -11,7 +11,7 @@ var forEach = require('es5-ext/object/for-each')
 module.exports = meta = Object.defineProperties({
 	all: {
 		label: _("All"),
-		order: 5
+		order: 3
 	},
 	pending: {
 		label: _("Pending"),
@@ -21,16 +21,8 @@ module.exports = meta = Object.defineProperties({
 	approved: {
 		label: _("Approved"),
 		order: 2
-	},
-	rejected: {
-		label: _("Rejected"),
-		order: 3
-	},
-	sentBack: {
-		label: _("Sent for corrections"),
-		order: 4
 	}
-}, { _services: d(['TODO: Provide service names']) });
+}, { _services: d(['demo']) });
 
 forEach(meta, function (conf, name) {
 	if (name === 'all') {

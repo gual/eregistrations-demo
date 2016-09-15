@@ -11,7 +11,7 @@ var deferred                   = require('deferred')
   , dbRecompute                = require('../server/scripts/db-recompute-in-sandbox')
   , generateDemoLegacyDbjsMock = require('./generate-business-process-demo-legacy-dbjs-mock')
   , i18nScan                   = require('./i18n-scan')
-  , env                        = require('../env')
+  , env                        = require('../server/env')
   , appsList                   = require('../server/apps/list')
 
   , root = resolve(__dirname, '..');

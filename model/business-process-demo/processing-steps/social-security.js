@@ -29,7 +29,7 @@ socialSecurityStep.defineProperties({
 
 socialSecurityStep.setProperties({
 	label: _("Social Security"),
-	previousSteps: function () { return [this.owner.revision]; }
+	previousSteps: function () { return [this.owner.processing]; }
 });
 
 socialSecurityStep.getOwnDescriptor('dataForm').type = FormSection;

@@ -33,5 +33,7 @@ require('eregistrations/server/business-process-data-forms-print').filenameReset
 var computeManagerSizes = require('eregistrations/server/services/compute-manager-relations-sizes');
 
 computeManagerSizes(driver)(function () { return driver.onDrain; })(function () {
-	return recompute(driver, slavePath)(driver.close.bind(driver));
+	return recompute(driver, slavePath, {
+		processingStepsMeta: require('../apps-common/processing-steps/meta')
+	})(driver.close.bind(driver));
 }).done();

@@ -45,6 +45,7 @@ userStorage.indexKeyPath('isManagerActive',
 userStorage.indexKeyPath('isManagerDesctructionBlocker', managerClients).done();
 userStorage.indexKeyPath('canManagedUserBeDestroyed', managerClients).done();
 userStorage.indexKeyPath('canManagerBeDestroyed', managers).done();
+userStorage.indexKeyPath('canBeDestroyed', userAccounts).done();
 
 userStorage.indexKeyPath('searchString', userAccounts).done();
 

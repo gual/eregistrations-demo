@@ -6,6 +6,7 @@ var db                  = require('../../db')
   , _                   = require('../../i18n')
   , UsDollar            = require('dbjs-ext/number/currency/us-dollar')(db)
   , UInteger            = require('dbjs-ext/number/integer/u-integer')(db)
+  , StringLine          = require('dbjs-ext/string/string-line')(db)
   , Address             = require('../lib/address')
   , BusinessProcessDemo = module.exports = require('./base');
 
@@ -31,5 +32,9 @@ BusinessProcessDemo.prototype.defineProperties({
 	attorney: {
 		type: db.Person,
 		nested: true
+	},
+	abbreviation: {
+		type: StringLine,
+		label: _("Company abbreviation")
 	}
 });

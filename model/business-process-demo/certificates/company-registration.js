@@ -8,7 +8,8 @@ module.exports = CompanyRegistration;
 
 CompanyRegistration.prototype.defineProperties({
 	dataForm: { type: FormSection },
-	processingStep: { value: function () { return this.master.processingSteps.map.processing; } }
+	processingStep: { value: function () { return this.master.processingSteps.map.processing; } },
+	isToBeHanded: { value: true }
 });
 
 CompanyRegistration.prototype.dataForm.setProperties({

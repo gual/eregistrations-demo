@@ -14,6 +14,12 @@ BusinessProcessDemo.prototype.registrations.map.certificateOfIncentives.setPrope
 
 		return assets >= 5000;
 	},
+	isMandatory: function (_observe) {
+		var businessProcess = this.master
+		  , assets  = businessProcess._get ? _observe(businessProcess._assets) : businessProcess.assets;
+
+		return assets >= 100000;
+	},
 	costs: function (_observe) {
 		return [
 			this.master.costs.map.certificateOfIncentives

@@ -40,7 +40,7 @@ socialSecurityStep.dataForm.setProperties({
 	},
 	label: _("Seals confirmation"),
 	propertyMasterType: socialSecurityStep.constructor,
-	propertyNames: ['isSealConfirmed', 'sealDate']
+	propertyNames: ['isSealConfirmed']
 });
 
 module.exports = BusinessProcessDemo;

@@ -10,3 +10,7 @@ module.exports = defineRequirementUploads(BusinessProcessDemo, [
 	require('../documents/inventory'),
 	require('../documents/passport')
 ]);
+
+var requirementUploads = BusinessProcessDemo.prototype.requirementUploads;
+
+requirementUploads.map.inventory.isFrontDeskApplicable = false;

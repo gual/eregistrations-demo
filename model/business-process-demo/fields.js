@@ -31,5 +31,10 @@ BusinessProcessDemo.prototype.defineProperties({
 	attorney: {
 		type: db.Person,
 		nested: true
+	},
+	isLocalCapital: {
+		type: db.Boolean,
+		label: _("Is the capital local or foreign?"),
+		inputHint: _("Choose 'yes' for local")
 	}
 });

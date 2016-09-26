@@ -7,6 +7,5 @@ var defineRequirementUploads =
 module.exports = defineRequirementUploads(BusinessProcessDemo, [
 	require('../documents/business-plan'),
 	require('../documents/company-registration'),
-	require('../documents/inventory'),
-	require('../documents/passport')
+	require('../documents/inventory')
 ]);

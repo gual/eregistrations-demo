@@ -6,6 +6,9 @@ var _                 = require('../../../../i18n').bind('Official: Front Desk')
 module.exports = {
 	preTrigger: businessProcesses.filterByKeyPath('processingSteps/map/frontDesk/isReady', true),
 	trigger: businessProcesses.filterByKeyPath('processingSteps/map/frontDesk/isApproved', true),
+	cc: function (businessProcess) {
+		return businessProcess.attorney.email;
+	},
 	resolveGetters: true,
 	variables: {
 		fullName: function () {

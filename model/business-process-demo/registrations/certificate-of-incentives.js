@@ -19,8 +19,13 @@ BusinessProcessDemo.prototype.registrations.map.certificateOfIncentives.setPrope
 			this.master.costs.map.certificateOfIncentives
 		];
 	},
-	requirements: function () {
-		var requirementsMap = this.master.requirements.map;
-		return [requirementsMap.companyRegistration, requirementsMap.businessPlan];
+	requirements: function (_observe) {
+		var requirementsMap = this.master.requirements.map, workers, result = [];
+		result.push(requirementsMap.companyRegistration);
+		workers = this._get ? _observe(this.master._workers) : this.master.workers;
+		if (workers > 5) {
+			result.push(requirementsMap.businessPlan);
+		}
+		return result;
 	}
 });

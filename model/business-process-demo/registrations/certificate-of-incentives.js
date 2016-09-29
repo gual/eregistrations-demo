@@ -16,7 +16,8 @@ BusinessProcessDemo.prototype.registrations.map.certificateOfIncentives.setPrope
 	},
 	costs: function (_observe) {
 		return [
-			this.master.costs.map.certificateOfIncentives
+			this.master.costs.map.certificateOfIncentives,
+			this.master.costs.map.booksVerificationFee
 		];
 	},
 	requirements: function () {

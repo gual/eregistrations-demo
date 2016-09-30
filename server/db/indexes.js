@@ -51,6 +51,7 @@ userStorage.indexKeyPath('searchString', userAccounts).done();
 forEach(businessProcessStorages, function (storage, name) {
 	// Needed for My Account
 	storage.indexKeyPath('status', businessProcesses[name]).done();
+	storage.indexKeyPath('registrations/requested', businessProcesses[name]).done();
 	storage.indexKeyPath('certificates/applicable', businessProcesses[name]).done();
 	// Needed for Part B search
 	storage.indexKeyPath('searchString', businessProcessesSubmitted[name]).done();

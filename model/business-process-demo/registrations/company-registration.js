@@ -17,5 +17,10 @@ BusinessProcessDemo.prototype.registrations.map.companyRegistration.setPropertie
 	requirements: function () {
 		var requirementsMap = this.master.requirements.map;
 		return [requirementsMap.inventory, requirementsMap.passport];
+	},
+	certificates: function () {
+		var certificatesMap = this.master.certificates.map;
+
+		return [certificatesMap.companyRegistration, certificatesMap.businessAddressCertification];
 	}
 });

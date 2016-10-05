@@ -8,5 +8,7 @@ module.exports = defineRequirementUploads(BusinessProcessDemo, [
 	require('../documents/business-plan'),
 	require('../documents/company-registration'),
 	require('../documents/inventory'),
-	require('../documents/passport')
+	require('../documents/passport'),
+	require('../documents/attorney-passport'),
+	require('../documents/attorney-personal-id')
 ]);

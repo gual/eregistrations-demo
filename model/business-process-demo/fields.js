@@ -7,6 +7,7 @@ var db                  = require('../../db')
   , UsDollar            = require('dbjs-ext/number/currency/us-dollar')(db)
   , UInteger            = require('dbjs-ext/number/integer/u-integer')(db)
   , Address             = require('../lib/address')
+  , Person              = require('../lib/person')
   , BusinessProcessDemo = module.exports = require('./base');
 
 BusinessProcessDemo.prototype.getOwnDescriptor('businessName').required = true;
@@ -29,7 +30,7 @@ BusinessProcessDemo.prototype.defineProperties({
 		nested: true
 	},
 	attorney: {
-		type: db.Person,
+		type: Person,
 		nested: true
 	}
 });

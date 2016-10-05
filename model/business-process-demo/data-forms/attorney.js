@@ -19,7 +19,8 @@ BusinessProcessDemo.prototype.dataForms.map.attorney.setProperties({
 		return _observe(this.master.registrations.requested)
 			.has(this.master.registrations.map.certificateOfIncentives);
 	},
-	propertyNames: ['attorney/firstName', 'attorney/lastName', 'attorney/email']
+	propertyNames: ['attorney/firstName', 'attorney/lastName', 'attorney/email',
+		'attorney/nationality']
 });
 
 module.exports = BusinessProcessDemo;

@@ -16,6 +16,6 @@ BusinessProcessDemo.prototype.registrations.map.companyRegistration.setPropertie
 	},
 	requirements: function () {
 		var requirementsMap = this.master.requirements.map;
-		return [requirementsMap.inventory, requirementsMap.passport];
+		return [requirementsMap.inventory, requirementsMap.passport, requirementsMap.attorneyId];
 	}
 });

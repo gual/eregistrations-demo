@@ -16,7 +16,7 @@ var publicRoutes = joinControllers(
 );
 
 var nonPublicGlobalRoutes = copy(globalRoutes);
-globalRoutes.login = publicRoutes.login;
+nonPublicGlobalRoutes.login = publicRoutes.login;
 
 var joinOptions = { extendedOnly: true, globalRoutes: nonPublicGlobalRoutes };
 

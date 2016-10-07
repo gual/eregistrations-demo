@@ -7,5 +7,6 @@ var defineCertificates =
 
 module.exports = defineCertificates(BusinessProcessDemo, [
 	require('./company-registration'),
-	require('./certificate-of-incentives')
+	require('./certificate-of-incentives'),
+	require('./company-incorporation')
 ]);

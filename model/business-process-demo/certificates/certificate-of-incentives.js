@@ -9,7 +9,7 @@ module.exports = CertificateOfIncentives;
 CertificateOfIncentives.prototype.defineProperties({
 	dataForm: { type: FormSection },
 	processingStep: { value: function () { return this.master.processingSteps.map.processing; } },
-	isToBeHanded: { value: true }
+	isElectronic: { value: true }
 });
 
 CertificateOfIncentives.prototype.dataForm.setProperties({
@@ -17,5 +17,5 @@ CertificateOfIncentives.prototype.dataForm.setProperties({
 	disablePartialSubmit: true,
 	actionUrl: function () { return this.master.__id__ + '/certificate/certificate-of-incentives'; },
 	propertyMasterType: CertificateOfIncentives,
-	propertyNames: ['number', 'files/map', 'issueDate']
+	propertyNames: ['number', 'issueDate']
 });

@@ -8,12 +8,6 @@ BusinessProcessDemo.prototype.registrations.map.defineProperties({
 
 BusinessProcessDemo.prototype.registrations.map.companyRegistration.setProperties({
 	Document: require('../../documents/company-registration'),
-	costs: function (_observe) {
-		var workers  = this.master._get
-			? _observe(this.master._workers) : this.master.workers;
-		if (!workers) return;
-		return [this.master.costs.map.companyRegistration];
-	},
 	requirements: function () {
 		var requirementsMap = this.master.requirements.map;
 		return [requirementsMap.inventory, requirementsMap.passport];

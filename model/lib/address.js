@@ -8,5 +8,6 @@ var _          = require('../../i18n')
 module.exports = db.Object.extend('Address', {
 	country: { type: Country, label: _("Country"), required: true },
 	city: { type: StringLine, label: _("City"), required: true },
-	street: { type: StringLine, label: _("Street or location"), required: true }
+	street: { type: StringLine, label: _("Street or location"), required: true },
+	postalCode: { type: StringLine, label: _("Postal code"), required: true }
 });

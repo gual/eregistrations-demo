@@ -1,7 +1,7 @@
 'use strict';
 
 var db                  = require('../../../db')
-  , _                   = require('../../../i18n').bind('Company: Model: Sections')
+  , _                   = require('../../../i18n').bind('Model: Sections')
   , FormSection         = require('eregistrations/model/form-section')(db)
   , BusinessProcessDemo = require('../base')
 

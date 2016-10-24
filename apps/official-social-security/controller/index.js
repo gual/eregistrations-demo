@@ -4,6 +4,7 @@
 
 var assign          = require('es5-ext/object/assign')
   , officialMatcher = require('eregistrations/controller/utils/official-matcher')
+  , save            = require('mano/utils/save')
   , socialSecurityMatcher;
 
 socialSecurityMatcher = function (businessProcessId) {
@@ -26,6 +27,17 @@ exports['[0-9][a-z0-9]+/validate'] = {
 	submit: function () {
 		this.processingStep.processor = this.user;
 		this.processingStep.officialStatus = 'approved';
+	},
+	redirectUrl: '/'
+};
+
+exports['[0-9][a-z0-9]+/reject'] = {
+	match: socialSecurityMatcher,
+	submit: function () {
+		save.apply(this, arguments);
+		if (this.processingStep.rejectionProgress !== 1) return;
+		this.processingStep.processor = this.user;
+		this.processingStep.officialStatus = 'rejected';
 	},
 	redirectUrl: '/'
 };

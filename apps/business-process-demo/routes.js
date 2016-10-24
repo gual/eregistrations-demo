@@ -11,3 +11,4 @@ require('../../view/user-base');
 assign(exports, require('eregistrations/routes/business-process'));
 
 defineTabbedForm('company', { isDefault: true, context: exports });
+defineTabbedForm('representative', { context: exports });

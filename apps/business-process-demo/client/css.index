@@ -30,6 +30,7 @@
 ../../../node_modules/eregistrations/css/components/error-page.css
 ../../../node_modules/eregistrations/css/components/entities-overview.css
 ../../../node_modules/eregistrations/css/components/signed-data-form-requirement.css
+../../../node_modules/eregistrations/css/components/forms-tab-nav.css
 ../../../node_modules/eregistrations/css/components/free-form.css
 ../../../node_modules/eregistrations/css/components/info-main.css
 ../../../node_modules/eregistrations/css/components/hint-optional.css

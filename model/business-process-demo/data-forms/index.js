@@ -2,5 +2,4 @@
 
 module.exports = require('./base');
 
-require('./company-information');
-require('./attorney');
+require('./company');

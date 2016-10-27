@@ -1,6 +1,7 @@
 'use strict';
 
-var from        = require('es5-ext/array/from')
+var _           = require('../../i18n').bind("Social Security table")
+  , from        = require('es5-ext/array/from')
   , getTable    = require('eregistrations/view/components/business-processes-table')
   , tableCols   = require('eregistrations/view/components/business-process-table-columns')
   , statusMap   = require('../../apps/official-social-security/business-processes/map')
@@ -12,6 +13,13 @@ var from        = require('es5-ext/array/from')
 
 module.exports = exports = require('eregistrations/view/business-processes-table');
 
+columns.splice(-1, 0, {
+	head: _("Sealed at"),
+	class: 'submitted-user-data-table-service',
+	data: function (businessProcess) {
+		return span(businessProcess.processingSteps.map.socialSecurity._sealDate);
+	}
+});
 columns.push(tableCols.archiverColumn);
 columns.push(tableCols.goToColumn);
 

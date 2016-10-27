@@ -6,4 +6,4 @@ var Set = require('es6-set');
 
 module.exports = new Set([
 	'certificates/dataSnapshot/jsonString', 'filesArchiveUrl',
-	'isApproved', 'isRejected', 'isSubmitted']);
+	'isApproved', 'isRejected', 'isSubmitted', 'processingSteps/map/socialSecurity/sealDate']);

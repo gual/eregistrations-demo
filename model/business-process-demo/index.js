@@ -9,6 +9,7 @@ require('../business-process');
 
 require('./fields');
 require('./determinants');
+require('./nested-entities');
 require('./guide');
 require('./certificates');
 require('./requirements');

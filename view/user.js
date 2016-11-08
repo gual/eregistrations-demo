@@ -40,5 +40,12 @@ exports._servicesBoxList = function () {
 		content: span(_("Short description of demo registration process")),
 		disabledCondition: gtOrEq(getSelectedBusinessProcesses(this.user,
 			db.BusinessProcessDemo)._size, 5)
+	}, {
+		actionUrl: '/register-as-other-one/',
+		buttonContent:  div({ class: 'user-account-service-button' },
+			i({ class: 'fa fa-user' }), _("Register Other One")),
+		content: span(_("Short description of other one registration process")),
+		disabledCondition: gtOrEq(getSelectedBusinessProcesses(this.user,
+			db.BusinessProcessOtherOne)._size, 5)
 	}];
 };

@@ -7,6 +7,8 @@ var ControllerRouter = require('controller-router');
 module.exports = {
 	'business-process-demo':
 		new ControllerRouter(require('../../apps/business-process-demo/server/routes')),
+	'business-process-other-one':
+		new ControllerRouter(require('../../apps/business-process-other-one/server/routes')),
 	'business-process-submitted':
 		new ControllerRouter(require('../../apps/business-process-submitted/server/routes')),
 	'meta-admin': new ControllerRouter(require('../../apps/meta-admin/server/routes')),

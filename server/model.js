@@ -12,6 +12,7 @@ require('../model/institutions');
 require('../model/global-primitives');
 
 require('../model/business-process-demo');
+require('../model/business-process-other-one');
 
 // Ensure domId property on sections
 require('eregistrations/view/dbjs/form-section-base-dom-id');

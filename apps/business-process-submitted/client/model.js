@@ -11,6 +11,7 @@ var db       = require('../../../db')
 user.$password.type = Password;
 
 require('../../../model/business-process-demo');
+require('../../../model/business-process-other-one');
 
 require('../../../model/views');
 

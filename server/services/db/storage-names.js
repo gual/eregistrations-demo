@@ -1,3 +1,3 @@
 'use strict';
 
-module.exports = ['businessProcessDemo', 'user', 'object'];
+module.exports = ['businessProcessDemo', 'businessProcessOtherOne', 'user', 'object'];

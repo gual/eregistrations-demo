@@ -5,6 +5,7 @@
 
 module.exports = {
 	"apps/business-process-demo": require("../../apps/business-process-demo/mano"),
+	"apps/business-process-other-one": require("../../apps/business-process-other-one/mano"),
 	"apps/business-process-submitted": require("../../apps/business-process-submitted/mano"),
 	"apps/meta-admin": require("../../apps/meta-admin/mano"),
 	"apps/official-front-desk": require("../../apps/official-front-desk/mano"),

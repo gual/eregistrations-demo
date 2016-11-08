@@ -11,3 +11,10 @@ initialize(
 		return includes.call(processingStepsMeta[stepShortPath]._services, 'demo');
 	})
 );
+
+initialize(
+	db.BusinessProcessOtherOne,
+	Object.keys(processingStepsMeta).filter(function (stepShortPath) {
+		return includes.call(processingStepsMeta[stepShortPath]._services, 'otherOne');
+	})
+);

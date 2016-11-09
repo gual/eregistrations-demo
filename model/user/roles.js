@@ -3,9 +3,10 @@
 'use strict';
 
 var _  = require('../../i18n')
-  , db = require('../../db');
+  , db = require('../../db')
+  , User;
 
-module.exports = require('eregistrations/model/user')(db);
+module.exports = User = require('eregistrations/model/user')(db);
 
 db.Role.members.add('metaAdmin');
 db.Role.members.add('user');
@@ -22,3 +23,6 @@ db.Role.meta.get('officialRevision').label = _("Revision");
 db.Role.meta.get('officialProcessing').label = _("Processing");
 db.Role.meta.get('officialSocialSecurity').label = _("Social Security");
 db.Role.meta.get('officialFrontDesk').label = _("Front Desk");
+
+User.prototype.getOwnDescriptor('password').inputHint =
+	_("Password must be at least eight characters long.");

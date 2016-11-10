@@ -27,6 +27,17 @@ processing.setProperties({
 	}
 });
 
+processing.certificates.set('released', function (_observe) {
+	var certificates = this.master.certificates
+	  , result       = [];
+
+	if (certificates.released.has(certificates.map.certificateOfIncentives)) {
+		result.push(certificates.map.certificateOfIncentives);
+	}
+
+	return result;
+});
+
 processing.requirementUploads.set('applicable', function (_observe) {
 	var requirementUploads = this.master.requirementUploads
 	  , result             = [];

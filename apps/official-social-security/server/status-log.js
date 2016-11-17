@@ -5,8 +5,7 @@ var _                  = require('../../../i18n')
   , socialSecurityPath = 'processingSteps/map/socialSecurity/';
 
 module.exports = [{
-	preTrigger:
-		businessProcesses.filterByKeyPath(socialSecurityPath + 'isPending', true),
+	preTrigger: businessProcesses,
 	trigger: businessProcesses.filterByKeyPath(socialSecurityPath + 'isApproved', true),
 	official: socialSecurityPath + 'processor',
 	label: _("Social Security"),

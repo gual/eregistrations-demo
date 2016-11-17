@@ -17,19 +17,19 @@ socialSecurityStep = BusinessProcessDemo.prototype.processingSteps.map.socialSec
 socialSecurityStep.defineProperties({
 	isSealConfirmed: {
 		type: db.Boolean,
-		label: _("Is the seal of the certificate confirmed"),
+		label: _("Are the seals of the certificates confirmed?"),
 		required: true
 	},
 	sealDate: {
 		type: DateType,
-		label: _("When was the document sealed"),
+		label: _("What is the date of sealing the last certificate?"),
 		required: true
 	}
 });
 
 socialSecurityStep.setProperties({
 	label: _("Social Security"),
-	previousSteps: function () { return [this.owner.revision]; },
+	previousSteps: function () { return [this.owner.processing; },
 	isApplicable: function (_observe) {
 		var requirementUploads = this.master.requirementUploads;
 		return _observe(requirementUploads.applicable).has(
@@ -44,7 +44,7 @@ socialSecurityStep.dataForm.setProperties({
 	actionUrl: function () {
 		return this.master.__id__ + '/social-security-form';
 	},
-	label: _("Seal confirmation"),
+	label: _("Seals confirmation"),
 	propertyMasterType: socialSecurityStep.constructor,
 	propertyNames: ['isSealConfirmed', 'sealDate']
 });
